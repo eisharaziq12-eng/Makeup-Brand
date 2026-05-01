@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Collection - Eisha Makeup Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="logo.png" alt="Eisha's Makeup Logo" class="logo-img">
+        </a>
+    </div>
+
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button type="button" onclick="searchProduct()">Search</button>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <div id="auth-section">
+                <a href="login.html" title="Login / Register" class="nav-icon-link">
+                    <span class="icon-label">Login</span> 👤
+                </a>
+            </div>
+            
+            <span id="likeIcon" title="Wishlist" style="cursor: pointer;">♡</span>
+            <a href="cart.html" title="View Cart">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<section class="foundation-container"> 
+    <h2 style="text-align: center; color: #d17a8e; margin-top: 30px; margin-bottom: 30px; text-transform: uppercase;">Flawless Foundations</h2>
+    
+    <div class="product-grid-8">
+        <div class="product-card" onclick="toggleDetails('f1')">
+            <img src="found1.png" alt="Matte Foundation">
+            <h3>Matte Finish Liquid</h3>
+            <p class="price">Rs. 2,200</p>
+            <div id="f1" class="product-details">
+                <p>Oil-free formula with 24-hour stay. Perfect for oily skin.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Matte Finish Liquid', 2200, 'found1.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f2')">
+            <img src="found2.png" alt="Dewy Foundation">
+            <h3>Dewy Glow Base</h3>
+            <p class="price">Rs. 2,500</p>
+            <div id="f2" class="product-details">
+                <p>Enriched with Vitamin E for a natural, hydrated glow.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Dewy Glow Base', 2500, 'found2.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f3')">
+            <img src="found3.png" alt="Full Coverage">
+            <h3>HD Full Coverage</h3>
+            <p class="price">Rs. 3,000</p>
+            <div id="f3" class="product-details">
+                <p>Hides all imperfections and spots with just one pump.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('HD Full Coverage', 3000, 'found3.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f4')">
+            <img src="found4.png" alt="Stick Foundation">
+            <h3>Foundation Stick</h3>
+            <p class="price">Rs. 1,800</p>
+            <div id="f4" class="product-details">
+                <p>Travel-friendly and easy to blend on the go.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Foundation Stick', 1800, 'found4.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f5')">
+            <img src="found5.png" alt="Serum Foundation">
+            <h3>Serum Infused Base</h3>
+            <p class="price">Rs. 2,800</p>
+            <div id="f5" class="product-details">
+                <p>Skin-care meets makeup. Lightweight and breathable.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Serum Infused Base', 2800, 'found5.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f6')">
+            <img src="found6.png" alt="Powder Foundation">
+            <h3>Velvet Powder Base</h3>
+            <p class="price">Rs. 1,500</p>
+            <div id="f6" class="product-details">
+                <p>Dual-action powder foundation for a soft-focus finish.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Velvet Powder Base', 1500, 'found6.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f7')">
+            <img src="found7.png" alt="BB Cream">
+            <h3>Tinted Moisturizer</h3>
+            <p class="price">Rs. 1,200</p>
+            <div id="f7" class="product-details">
+                <p>For days when you want a 'no-makeup' makeup look.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Tinted Moisturizer', 1200, 'found7.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('f8')">
+            <img src="found8.png" alt="Mousse Foundation">
+            <h3>Light Mousse Base</h3>
+            <p class="price">Rs. 2,100</p>
+            <div id="f8" class="product-details">
+                <p>Air-whipped formula for a feather-light feel on skin.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Light Mousse Base', 2100, 'found8.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

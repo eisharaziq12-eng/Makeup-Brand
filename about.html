@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Eisha's Makeup Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="logo.png" alt="Logo" class="logo-img">
+        </a>
+    </div>
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+    <div class="header-right">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button type="button" onclick="searchProduct()">Search</button>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <div id="auth-section">
+                <a href="login.html" title="Login / Register" class="nav-icon-link">
+                    <span class="icon-label">Login</span> 👤
+                </a>
+            </div>
+            
+            <span id="likeIcon" title="Wishlist" style="cursor: pointer;">♡</span>
+            <a href="cart.html" title="View Cart">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<section class="about-hero">
+    </section>
+
+<section class="about-content">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Beauty With Purpose</h2>
+            <p>Welcome to <strong>Eisha's Makeup Collection</strong>. Founded with a passion for elegance, our journey started with a simple idea: every person deserves to feel confident.</p>
+            <p>We believe makeup highlights your unique features. Our products are curated to be gentle on the skin while providing a professional, glowing finish.</p>
+        </div>
+        <div class="about-image">
+            <img src="purpose.jfif" alt="Beauty Care">
+        </div>
+    </div>
+</section>
+
+<section class="values-section">
+    <div class="value-box">
+        <div class="value-img-container">
+            <img src="makrup.jfif" alt="Quality">
+        </div>
+        <h3>Premium Quality</h3>
+        <p>We use high-grade ingredients that are safe and long-lasting.</p>
+    </div>
+
+    <div class="value-box">
+        <div class="value-img-container">
+            <img src="free.jpg" alt="Cruelty Free">
+        </div>
+        <h3>Cruelty Free</h3>
+        <p>None of our products are tested on animals. We love nature!</p>
+    </div>
+
+    <div class="value-box">
+        <div class="value-img-container">
+            <img src="for.jpg" alt="Everyone">
+        </div>
+        <h3>For Everyone</h3>
+        <p>Our shades are designed to complement every skin tone beautifully.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>CATEGORIES</h3>
+            <ul><li>Make Up</li><li>Skin Care</li><li>Fragrance</li></ul>
+        </div>
+        <div class="footer-box">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul><li>About Us</li><li>Contact Us</li><li>Shipping Policy</li></ul>
+        </div>
+        <div class="footer-box">
+            <h3>CONTACT US</h3>
+            <p>Rawalpindi, Pakistan</p>
+            <p>+92 3xx xxxxxxxx</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

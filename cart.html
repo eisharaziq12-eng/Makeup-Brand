@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Eisha Makeup Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html"><img src="logo.png" alt="Logo" class="logo-img"></a>
+    </div>
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+    <div class="header-right" style="display: flex; align-items: center; gap: 20px;">
+        <div id="auth-section">
+            <a href="login.html" title="Login / Register" class="nav-icon-link" style="text-decoration:none; color:#333;">
+                Login 👤
+            </a>
+        </div>
+        <a href="index.html" style="text-decoration:none; color:#d17a8e; font-weight:600;">← Continue Shopping</a>
+    </div>
+</header>
+
+<section class="cart-wrapper">
+    <div class="cart-container">
+        <div class="cart-items-section">
+            <h2>Your Shopping Bag ✨</h2>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">Rs. 0</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">Rs. 0</span>
+            </div>
+            <hr>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="grand-total">Rs. 0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <p class="secure-text">🔒 Secure Payment System</p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

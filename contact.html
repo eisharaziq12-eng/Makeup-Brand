@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Eisha's Makeup Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="logo.png" alt="Eisha's Makeup Logo" class="logo-img">
+        </a>
+    </div>
+
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+
+    <div class="header-right">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button type="button" onclick="searchProduct()">Search</button>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <div id="auth-section">
+                <a href="login.html" title="Login / Register" class="nav-icon-link">
+                    <span class="icon-label">Login</span> 👤
+                </a>
+            </div>
+            
+            <span id="likeIcon" title="Wishlist" style="cursor: pointer;">♡</span>
+            <a href="cart.html" title="View Cart">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<section class="contact-hero">
+    <h1 style="color: rgb(219, 20, 153);">Get In Touch</h1>
+    <p style="color: rgb(156, 3, 105);">We'd love to hear from you!</p>
+</section>
+
+<section class="contact-container">
+    <div class="contact-wrapper">
+        
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Fill out the form and our team will get back to you within 24 hours.</p>
+            
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <p>Rawalpindi, Pakistan</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📞</span>
+                <p>+92 3xx  xxxxxxx</p>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <p>store@eishamakeup.pk</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon. ✨'); this.reset();">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

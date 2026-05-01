@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisha Makeup Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="logo.png" alt="Eisha's Makeup Logo" class="logo-img">
+        </a>
+    </div>
+
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+
+   <div class="header-right">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button type="button" onclick="searchProduct()">Search</button>
+    </div>
+</div>
+</header>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <div id="auth-section">
+                <a href="login.html" title="Login / Register" class="nav-icon-link">
+                    <span class="icon-label">Login</span> 👤
+                </a>
+            </div>
+            
+            <span id="likeIcon" title="Wishlist" style="cursor: pointer;">♡</span>
+            <a href="cart.html" title="View Cart">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Glow Naturally ✨</h1>
+        <p class="subtitle">Where elegance meets everyday beauty.</p>
+        <p class="description">
+            Thoughtfully curated makeup to enhance your natural glow, 
+            because confidence looks best when it feels effortless.
+        </p>
+    </div>
+</section>
+
+<section class="featured-section">
+    <h2 class="featured-heading">Featured Products</h2>
+    <div class="featured-grid">
+        <a href="lipstick.html" class="featured-card">
+            <img src="lipstick.png" alt="Lipstick">
+            <p>Lipstick</p>
+        </a>
+        <a href="foundation.html" class="featured-card">
+            <img src="foundation.png" alt="Foundation">
+            <p>Foundation</p>
+        </a>
+        <a href="eyeshadow.html" class="featured-card">
+            <img src="eyeshadow.png" alt="Eyeshadow">
+            <p>Eyeshadow</p>
+        </a>
+    </div>
+</section>
+
+<section class="integrated-review-section">
+    <div class="review-content-wrapper">
+        <h2>Customer Love 💖</h2>
+        
+        <div class="write-review-box">
+            <input type="text" id="revName" placeholder="Your Name">
+            <textarea id="revText" placeholder="How was your experience?"></textarea>
+            <button onclick="addNewReview()" class="post-btn">Post Review ✨</button>
+        </div>
+
+        <hr class="divider">
+
+        <div id="reviewsList" class="reviews-scroll-container">
+           </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>CATEGORIES</h3>
+            <ul>
+                <li>Make Up</li>
+                <li>Skin Care</li>
+                <li>Hair Care</li>
+                <li>Bundle Deals</li>
+                <li>Fragrance</li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>CUSTOMER SERVICE</h3>
+            <ul>
+                <li>FAQ's</li>
+                <li>Blogs</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Shipping Policy</li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>CONTACT US</h3>
+            <p>Rawalpindi, Pakistan</p>
+            <p>+92 3xx xxxxxxx</p>
+            <p>store@eishamakeup.pk</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function addNewReview() {
+    let name = document.getElementById('revName').value;
+    let text = document.getElementById('revText').value;
+    let list = document.getElementById('reviewsList');
+
+    if(name.trim() === "" || text.trim() === "") {
+        alert("Please fill both name and review! 😊");
+        return;
+    }
+
+    let newRev = `
+        <div class="mini-review" style="background:#fff; padding:15px; margin-bottom:10px; border-radius:8px; border-left:4px solid #d17a8e;">
+            <strong>${name}</strong> <span style="color:gold;">⭐⭐⭐⭐⭐</span>
+            <p style="margin-top:5px; font-style:italic;">"${text}"</p>
+        </div>
+    `;
+
+    list.innerHTML = newRev + list.innerHTML;
+    document.getElementById('revName').value = "";
+    document.getElementById('revText').value = "";
+}
+</script>
+
+</body>
+</html>

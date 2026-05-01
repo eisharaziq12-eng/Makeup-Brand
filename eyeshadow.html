@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyeshadow Collection - Eisha Makeup Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="main-header">
+    <div class="logo-section">
+        <a href="index.html">
+            <img src="logo.png" alt="Eisha's Makeup Logo" class="logo-img">
+        </a>
+    </div>
+
+    <div class="brand-title">
+        <h1>Eisha's Makeup Collection</h1>
+    </div>
+
+   <div class="header-right">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button type="button" onclick="searchProduct()">Search</button>
+    </div>
+</div>
+</header>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eyeshadow.html">Eyeshadow</a></li>
+            <li><a href="foundation.html">Foundation</a></li>
+            <li><a href="lipstick.html">Lipstick</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <div id="auth-section">
+                <a href="login.html" title="Login / Register" class="nav-icon-link">
+                    <span class="icon-label">Login</span> 👤
+                </a>
+            </div>
+            
+            <span id="likeIcon" title="Wishlist" style="cursor: pointer;">♡</span>
+            <a href="cart.html" title="View Cart">🛒</a>
+        </div>
+    </div>
+</nav>
+
+<section class="eyeshadow-container">
+    <h2 style="text-align: center; color: #d17a8e; margin-bottom: 30px; text-transform: uppercase;">Eyeshadow Palettes</h2>
+    
+    <div class="product-grid-8">
+        <div class="product-card" onclick="toggleDetails('e1')">
+            <img src="eye1.jfif" alt="Nude Palette">
+            <h3>Nude Desire</h3>
+            <p class="price">Rs. 1,500</p>
+            <div id="e1" class="product-details">
+                <p>Perfect for daily wear. 12 soft matte shades.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Nude Desire', 1500, 'eye1.jfif')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e2')">
+            <img src="eye2.png" alt="Smokey Palette">
+            <h3>Smokey Night</h3>
+            <p class="price">Rs. 1,800</p>
+            <div id="e2" class="product-details">
+                <p>Deep blacks and greys for the perfect bold look.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Smokey Night', 1800, 'eye2.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e3')">
+            <img src="eye3.png" alt="Glitter Palette">
+            <h3>Rose Gold Shine</h3>
+            <p class="price">Rs. 2,200</p>
+            <div id="e3" class="product-details">
+                <p>High-shimmer rose gold and copper tones.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Rose Gold Shine', 2200, 'eye3.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e4')">
+            <img src="eye4.png" alt="Matte Palette">
+            <h3>Velvet Matte</h3>
+            <p class="price">Rs. 1,650</p>
+            <div id="e4" class="product-details">
+                <p>Extra pigmented matte shades for a smooth finish.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Velvet Matte', 1650, 'eye4.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e5')">
+            <img src="eye5.png" alt="Neon Palette">
+            <h3>Electric Neon</h3>
+            <p class="price">Rs. 2,000</p>
+            <div id="e5" class="product-details">
+                <p>Bright neon colors for creative makeup art.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Electric Neon', 2000, 'eye5.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e6')">
+            <img src="eye6.png" alt="Earth Palette">
+            <h3>Earth Tones</h3>
+            <p class="price">Rs. 1,400</p>
+            <div id="e6" class="product-details">
+                <p>Organic browns and greens for a natural vibe.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Earth Tones', 1400, 'eye6.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e7')">
+            <img src="eye7.png" alt="Bridal Palette">
+            <h3>Bridal Glam</h3>
+            <p class="price">Rs. 3,500</p>
+            <div id="e7" class="product-details">
+                <p>Luxury palette with mirrors and 24 heavy shades.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Bridal Glam', 3500, 'eye7.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+
+        <div class="product-card" onclick="toggleDetails('e8')">
+            <img src="eye8.png" alt="Mini Palette">
+            <h3>Pocket Sparkle</h3>
+            <p class="price">Rs. 950</p>
+            <div id="e8" class="product-details">
+                <p>Travel-friendly mini palette with 4 essential shades.</p>
+                <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Pocket Sparkle', 950, 'eye8.png')">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
